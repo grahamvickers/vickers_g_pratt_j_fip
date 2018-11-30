@@ -105,8 +105,9 @@ We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 
 	flex-direction: row;
   justify-content: flex-start;
 	/* border-bottom: solid 1px #000; */
-	position: -webkit-sticky;
-	position: sticky;
+	/* Removed sticky because it did not add to the functionality of the site */
+	/* position: -webkit-sticky;
+	position: sticky; */
 	top: 0;
 	background-color: #2d2f33;
 	border-bottom: solid 1px #000;
@@ -392,26 +393,48 @@ line-height: 30px;
 
 }
 
-/*Get rid of this, here just to give different height*/
-/* #productImages p
-{
-	line-height: 250px;
-} */
-
-/* .productImg
-{
-	width: 280px;
-}removed from template code */
-
 .productImg1{
-	padding-left:40px;
+	margin-left:40px;
+	width:165px;
+	height:247px;
+	position:relative;
+}
+.productImg1:hover .img__description {
+  visibility: visible;
+  opacity: .8;
 }
 .productImg3{
-	padding-right:40px;
+	margin-right:40px;
+	width:165px;
+	height:247px;
+	position:relative;
+}
+.productImg3:hover .img__description {
+  visibility: visible;
+  opacity: .8;
+}
+.productImg2{
+	width:171px;
+	height:250px;
+	position:relative;
+}
+.productImg2:hover .img__description {
+  visibility: visible;
+  opacity: .8;
 }
 
 
 
+.bigImage{
+	width:921px;
+	height:301px;
+	position:relative;
+
+}
+.bigImage:hover .img__description {
+  visibility: visible;
+  opacity: .8;
+}
 #contentAreaBig
 {
 	margin-top: 40px;
@@ -419,17 +442,44 @@ line-height: 30px;
 	padding-bottom: 40px;
 }
 
-/*Get rid of this, here just to give different height*/
-#contentAreaBig p
-{
-	color: #b3b3b3;
-	line-height: 100px;
-}
+
 
 #promoImageBig
 {
+	position: relative;
 	width: 920px;
+	height:251px;
 }
+/*  Copy this bottom text and replace #promoImage big withthe image you want*/
+#promoImageBig:hover .img__description {
+  visibility: visible;
+  opacity: .8;
+}
+
+/*  Image hover feauture. */
+.img__description {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background:#efefef;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+	transition: opacity .2s, visibility .2s;
+	color: #000;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+
+}
+
+
+
+
+
+
 
 
 
@@ -437,12 +487,26 @@ line-height: 30px;
 
 .productDescLargeLeft
 {
+	position: relative;
 	width: 410px;
+	height:300px;
+}
+
+.productDescLargeLeft:hover .img__description {
+  visibility: visible;
+  opacity: .8;
 }
 
 .productDescLargeRight
 {
+	position:relative;
 	width: 410px;
+	height:300px
+}
+
+.productDescLargeRight:hover .img__description {
+  visibility: visible;
+  opacity: .8;
 }
 
 #bottomBar
