@@ -1,0 +1,452 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*Remove this rule, this is only for demo purposes to make the boxes black with white text
+The line height on the <p> tag gives each box a height value*/
+
+/* p
+{
+	color: #fff;
+	line-height: 100px;
+	background: #000;
+	text-align: center;
+	margin: 0;
+} */
+
+
+
+/*basic reset*/
+/*browsers have built in values for elements so we'll reset a few things to zero, you can add to this or remove items as needed*/
+
+div,p,body,header,footer,section,article,nav
+{
+	margin: 0;
+	padding: 0;
+}
+
+img
+{
+	border: none; /*Remove border if image is a link*/
+	margin: 0;
+	padding: 0;
+}
+
+/*html selectors*/
+
+body
+{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	color: #333;
+	background-color: #2d2f33;
+}
+
+
+
+
+.hidden{
+	display: none;
+}
+
+
+
+/*a:link is for not visited(standard unclicked link),
+a:visited is for visited, and just a applies to both.*/
+/*a will also style anchor links*/
+
+a:link
+{
+ 	text-decoration:none;
+	color:#b3b3b3;
+
+}
+a:visited{
+	color:#b3b3b3;
+}
+
+a:hover, a:active
+{
+	text-decoration:none;
+	color:white;
+}
+
+/*hide elements from browser but show for doc outline*/
+
+.hidden
+{
+	display: none;
+}
+
+/*section is block level and no width specidied therefore stretches full screen*/
+#topBar
+{
+	background-color: #b3b3b3;
+	height: 20px;
+}
+
+/*Site Container*/
+/*This is essentially a box that we place the whole site in.
+We center the box using margin 0 auto and give it a fixed width of 920 + 20px + 20px (960px) so it fits on 1024x768 screens.*/
+
+#siteContainer
+{
+	margin: 0 auto;
+	width: 920px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/*This is a flex container*/
+#mainHeader
+{
+	margin-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  justify-content: flex-start;
+	/* border-bottom: solid 1px #000; */
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: #2d2f33;
+	border-bottom: solid 1px #000;
+}
+
+/*This is a flex item*/
+#logo
+{
+	color: #fff;
+	line-height: 100px;
+	text-align: center;
+	margin: 0;
+	width: 200px;
+
+
+}
+
+/*This is also a flex item*/
+/*We use margin left auto to send it all the way to the right*/
+#mainNav
+{
+	margin-top: 25px;
+	margin-left: 100px;
+	width: 500px;
+	color: #b3b3b3;
+	line-height: 100px;
+	text-align: right;
+	font-size: 24px;
+
+
+}
+
+/* Takes the bullet points and indentation out of lists   */
+ .table {
+	min-width: 696px;
+	display: table;
+	margin: 0 auto;
+	float:right;
+
+
+}
+
+ul#horizontal-menu {
+	/* min-width: 696px; */
+	width:inherit;
+	list-style: none;
+	margin-left: 60px;
+	padding-top: 20px;
+
+	}
+	ul#horizontal-menu li {
+		display: inline;
+		padding-right: 5px;
+		font-weight:bold;
+		font-color: #b3b3b3;
+
+	}
+/*Menu used in the footer for alinging to the left  */
+	ul#horizontal-menu1 {
+		/* min-width: 696px; */
+		width:auto;
+		padding-right: 20px;
+		list-style: none;
+		padding-top: 20px;
+
+		}
+		ul#horizontal-menu1 li {
+			display: inline;
+			padding-right: 5px;
+			font-weight:bold;
+			font-color: #b3b3b3;
+		}
+
+#promo
+{
+	/* margin-top: 40px; */
+	border-bottom: solid 1px #000;
+	padding-bottom: 40px;
+	padding-top: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+#promo p
+{
+	line-height: 250px;
+}
+
+#promoText
+{
+	width: 600px;
+}
+
+#promoImage
+{
+	margin-left: auto;
+	width: 280px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#productInfo
+{
+	margin-top: 40px;
+	display: flex;
+	flex-direction: row;
+  	justify-content: space-between;
+	border-bottom: solid 1px #000;
+	padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height to productInfo*/
+#productInfo p
+{
+	line-height: 300px;
+}
+
+.productDesc
+{
+	width: 200px;
+}
+
+#mainFooter
+{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-bottom: 50px;
+	border-bottom: solid 1px #000;
+	width:/2;
+	display: flex;
+	flex-direction: row;
+  	justify-content: flex-start;
+}
+
+#footerNav
+{
+	margin-right: auto;
+	width: 500px;
+	color: #b3b3b3;
+	padding-top: 20px;
+	line-height: 0px;
+	text-align: left;
+	font-size: 24px;
+}
+
+#copyRight
+{
+	margin-left: auto;
+	padding-top: 20px;
+	color: #b3b3b3;
+	width: 310px;
+	line-height: 30px;
+	font-family: Helvetica;
+	font-weight: lighter;
+	font-size: 20px;
+}
+
+/*Page 2 - Notice we are using one style sheet for all of the pages*/
+
+#contentCon {
+	margin-top: 40px;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+  justify-content: flex-start;
+	border-bottom: solid 1px #000;
+}
+
+/*Get rid of this, here just to give different height to promo*/
+#contentCon p
+{
+	line-height: 100px;
+}
+
+#content1
+{
+	width: 440px;
+	color: #b3b3b3;
+	font-family: Helvetica;
+	font-size: 34px;
+}
+#input1{
+	display:block;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #b7bece;
+	border-style: none;
+	font-family: inherit;
+	font-color:white;
+	width: 350px;
+	border-radius: 5px;
+}
+#input2{
+	display:block;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #b7bece;
+	border-style: none;
+	font-family: inherit;
+	font-color:white;
+	width: 350px;
+	border-radius: 5px;
+}
+#input3{
+	display:block;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #b7bece;
+	border-style: none;
+	font-family: inherit;
+	font-color:white;
+	width: 350px;
+	border-radius: 5px;
+}
+#input4{
+	display:block;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #b7bece;
+	border-style: none;
+	font-family: inherit;
+	font-color:white;
+	width: 350px;
+	border-radius: 5px;
+}
+#submit{
+
+
+	font-size: 18px;
+	background-color: #b7bece;
+	border-style: none;
+	font-family: inherit;
+	font-weight: lighter;
+	border-radius: 5px;
+
+
+}
+
+#content2
+{
+	margin-left: auto;
+	width: 440px;
+	color: #b3b3b3;
+	font-family: Helvetica;
+	font-size: 24px;
+	margin-bottom:20px;
+	padding-top: 45px;
+	text-align: right;
+}
+#content2 p
+{
+line-height: 30px;
+}
+
+#map{
+	margin-top: 30px;
+}
+
+#jobs{
+ font-family: Helvetica;
+ font-weight: lighter;
+ font-size: 20px;
+ line-height: 30px;
+}
+#jobs2{
+ font-family: Helvetica;
+ font-weight: lighter;
+ font-size: 20px;
+ line-height: 30px;
+}
+
+/*Page 3*/
+
+#productImages
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #000;
+	padding-bottom: 40px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
+
+/*Get rid of this, here just to give different height*/
+/* #productImages p
+{
+	line-height: 250px;
+} */
+
+/* .productImg
+{
+	width: 280px;
+}removed from template code */
+
+.productImg1{
+	padding-left:40px;
+}
+.productImg3{
+	padding-right:40px;
+}
+
+
+
+#contentAreaBig
+{
+	margin-top: 40px;
+	border-bottom: solid 1px #000;
+	padding-bottom: 40px;
+}
+
+/*Get rid of this, here just to give different height*/
+#contentAreaBig p
+{
+	color: #b3b3b3;
+	line-height: 100px;
+}
+
+#promoImageBig
+{
+	width: 920px;
+}
+
+
+
+/*Page 4*/
+
+.productDescLargeLeft
+{
+	width: 410px;
+}
+
+.productDescLargeRight
+{
+	width: 410px;
+}
+
+#bottomBar
+{
+	background-color: #b3b3b3;
+	height: 20px;
+}
